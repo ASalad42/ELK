@@ -25,6 +25,22 @@
 - `kubectl get pvc --namespace=default`
 - `kubectl get ingress --namespace=default`
 
+## Amazon EBS CSI driver
+
+- Create IAM OIDC provider for cluster
+- https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
+- create Amazon EBS CSI driver IAM role
+- https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html#csi-iam-role
+- add Amazon EBS CSI driver add-on.
+- https://docs.aws.amazon.com/eks/latest/userguide/creating-an-add-on.html
+- ![image](https://github.com/user-attachments/assets/afe37cb8-2804-4ba9-b214-ef34610fd18e)
+- kubectl get all -l app.kubernetes.io/name=aws-ebs-csi-driver -n kube-system
+![image](https://github.com/user-attachments/assets/6e53f52b-36e4-47f1-9107-a184e05e72a0)
+- kubectl get pvc -n elk
+- kubectl describe pod elasticsearch-master-0 -n elk
+- kubectl describe pvc elasticsearch-master-elasticsearch-master-0 -n elk
+
+
 ## Install ELK on EKS via Helm
 
 - `kubectl create ns elk`
@@ -48,15 +64,4 @@
 
 
 
-### Amazon EBS CSI driver
-
-- Create IAM OIDC provider for cluster
-- https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
-- create Amazon EBS CSI driver IAM role
-- https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html#csi-iam-role
-- add Amazon EBS CSI driver add-on.
-- https://docs.aws.amazon.com/eks/latest/userguide/creating-an-add-on.html
-- ![image](https://github.com/user-attachments/assets/afe37cb8-2804-4ba9-b214-ef34610fd18e)
-- kubectl get all -l app.kubernetes.io/name=aws-ebs-csi-driver -n kube-system
-![image](https://github.com/user-attachments/assets/6e53f52b-36e4-47f1-9107-a184e05e72a0)
 
