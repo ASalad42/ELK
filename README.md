@@ -1,7 +1,16 @@
 # ELK
 
+## ELK infrastructure
+
+- Deploy ELK infrastructure such as VPC, subnets, security group and EKS cluster via github actions (template.yaml)
+- ![image](https://github.com/user-attachments/assets/ffeef627-3f94-4bbf-a3fc-23d1ec865289)
+- ![image](https://github.com/user-attachments/assets/af70e43d-719d-448e-864a-df6f540aedca)
 - `aws eks update-kubeconfig --region eu-west-1 --name ELK-Stack-v2`
 - `aws eks --region eu-west-1  describe-cluster --name ELK-Stack-v2`
+
+## Nodegroup infrastructure
+
+- Deploy nodegroup stack (cloudformation.yaml)
 - `kubectl get svc`
 - `kubectl get all`
 - `kubectl get pods`
@@ -12,6 +21,9 @@
 - `kubectl get pv`
 - `kubectl get pvc --namespace=default`
 - `kubectl get ingress --namespace=default`
+
+## Install ELK on EKS via Helm
+
 - `helm help`
 - `helm repo update`
 - `helm repo add elastic https://helm.elastic.co`
@@ -26,7 +38,7 @@
 - `kubectl get secret elasticsearch-master-credentials -o jsonpath="{.data.username}" | base64 --decode`
 - `kubectl get secret elasticsearch-master-credentials -o jsonpath="{.data.password}" | base64 --decode`
 
-## Amazon EBS CSI driver
+### Amazon EBS CSI driver
 
 - Create IAM OIDC provider for cluster > create Amazon EBS CSI driver IAM role > add Amazon EBS CSI driver add-on.
 - <https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html>
