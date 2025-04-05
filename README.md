@@ -52,6 +52,7 @@
 - `helm show values elastic/elasticsearch > values.yml`
 - `helm show values elastic/kibana > values.yml`
 - `helm install elasticsearch elastic/elasticsearch -f values.yml -n elk`
+- `helm upgrade --install elasticsearch elastic/elasticsearch -f values.yml -n elk`
 - `helm install filebeat elastic/filebeat -f values.yml -n elk`
 - `helm install logstash elastic/logstash -f values.yml -n elk`
 - `helm install kibana elastic/kibana -f values.yml -n elk`
