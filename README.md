@@ -56,4 +56,7 @@
 - https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html#csi-iam-role
 - add Amazon EBS CSI driver add-on.
 - https://docs.aws.amazon.com/eks/latest/userguide/creating-an-add-on.html
-- <https://docs.aws.amazon.com/eks/latest/userguide/managing-ebs-csi.html>
+- ![image](https://github.com/user-attachments/assets/afe37cb8-2804-4ba9-b214-ef34610fd18e)
+- kubectl get all -l app.kubernetes.io/name=aws-ebs-csi-driver -n kube-system
+![image](https://github.com/user-attachments/assets/6e53f52b-36e4-47f1-9107-a184e05e72a0)
+
