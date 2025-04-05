@@ -50,8 +50,10 @@
 
 ### Amazon EBS CSI driver
 
-- Create IAM OIDC provider for cluster > create Amazon EBS CSI driver IAM role > add Amazon EBS CSI driver add-on.
-- <https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html>
-- <https://docs.aws.amazon.com/eks/latest/userguide/csi-iam-role.html>
+- Create IAM OIDC provider for cluster
+- https://docs.aws.amazon.com/eks/latest/userguide/enable-iam-roles-for-service-accounts.html
+- create Amazon EBS CSI driver IAM role
+- https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html#csi-iam-role
+- add Amazon EBS CSI driver add-on.
+- https://docs.aws.amazon.com/eks/latest/userguide/creating-an-add-on.html
 - <https://docs.aws.amazon.com/eks/latest/userguide/managing-ebs-csi.html>
-- <https://docs.aws.amazon.com/eks/latest/userguide/ebs-sample-app.html>
