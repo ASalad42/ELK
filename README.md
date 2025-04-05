@@ -27,6 +27,7 @@
 
 ## Install ELK on EKS via Helm
 
+- `kubectl create ns elk`
 - `helm help`
 - `helm repo update`
 - `helm repo add elastic https://helm.elastic.co`
