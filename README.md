@@ -76,4 +76,16 @@ volumeClaimTemplate:
 - ![image](https://github.com/user-attachments/assets/7e852f73-a80b-440f-a61c-b5e963ef6e3d)
 - ![image](https://github.com/user-attachments/assets/efbad974-13ac-4d21-a0f2-ac9da67e8831)
 - ![image](https://github.com/user-attachments/assets/76ec5001-d505-4806-b7ef-259e3f060236)
+- ![image](https://github.com/user-attachments/assets/32807fc7-1e27-40f2-8f52-a5e35ee13b27)
+- `kubectl get secrets -n elk  elasticsearch-master-credentials -o jsonpath="{.data.username}" | base64 --decode`
+- `kubectl get secrets -n elk  elasticsearch-master-credentials -o jsonpath="{.data.password}" | base64 --decode`
+- visit http://abb0b513aa08f472dbb613f95b94b98e-1226330087.eu-west-1.elb.amazonaws.com:5601
+- login with username and password from secrets
+- ![image](https://github.com/user-attachments/assets/586fa61b-2294-491e-8941-90ecac9b2a64)
+- ![image](https://github.com/user-attachments/assets/be2a7682-b0ae-400a-a3e7-0a4478050e76)
+- ![image](https://github.com/user-attachments/assets/b4b44859-e49f-4602-81e6-cbb7e5d0a147)
+
+
+
+
 
