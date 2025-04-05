@@ -41,6 +41,12 @@
 - `helm install kibana elastic/kibana -f values.yml -n elk`
 - `kubectl get secret elasticsearch-master-credentials -o jsonpath="{.data.username}" | base64 --decode`
 - `kubectl get secret elasticsearch-master-credentials -o jsonpath="{.data.password}" | base64 --decode`
+- ![image](https://github.com/user-attachments/assets/ce193588-e6d3-41d2-b638-50c4444d1437)
+- ![image](https://github.com/user-attachments/assets/7e852f73-a80b-440f-a61c-b5e963ef6e3d)
+- ![image](https://github.com/user-attachments/assets/efbad974-13ac-4d21-a0f2-ac9da67e8831)
+
+
+
 
 ### Amazon EBS CSI driver
 
