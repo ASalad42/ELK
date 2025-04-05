@@ -51,7 +51,7 @@ extraEnvs:
       valueFrom:
         secretKeyRef:
           name: elasticsearch-master-credentials
-          key: admin123##
+          key: admin123
 
 # Allows you to load environment variables from kubernetes secret or config map
 envFrom: []
