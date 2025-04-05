@@ -27,5 +27,5 @@ jobs:
             --stack-name ELKStack \
             --parameter-overrides KeyName=elk-key \
             --region eu-west-1 \
-            --capabilities CAPABILITY_IAM CAPABILITY_AUTO_EXPAND
+            --capabilities CAPABILITY_NAMED_IAM
 
