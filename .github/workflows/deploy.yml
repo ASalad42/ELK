@@ -3,7 +3,7 @@ name: Deploy ELK Stack
 on:
   push:
     branches:
-      - main
+      - tmp
 
 jobs:
   deploy:

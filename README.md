@@ -1,7 +1,6 @@
 # ELK
 
 - `aws eks update-kubeconfig --region eu-west-1 --name ELK-Stack-v2`
-- `aws eks --region eu-west-1 update-kubeconfig  --name ELK-Stack-v2`
 - `aws eks --region eu-west-1  describe-cluster --name ELK-Stack-v2`
 - `kubectl get svc`
 - `kubectl get all`

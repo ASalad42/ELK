@@ -217,8 +217,7 @@ Resources:
           Ref: NodeAutoScalingGroupMaxSize
       Subnets: !Ref Subnets 
       Labels:
-        Name: Elasticsearch
-  
+        Name: ELK
 
 Outputs:
   NodeInstanceRole:
