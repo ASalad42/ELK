@@ -109,7 +109,8 @@ volumeClaimTemplate:
   accessModes: ["ReadWriteOnce"]
   resources:
     requests:
-      storage: 30Gi
+      storage: 4Gi
+  storageClassName: gp2
 
 rbac:
   create: false
