@@ -75,3 +75,5 @@ volumeClaimTemplate:
 - ![image](https://github.com/user-attachments/assets/ce193588-e6d3-41d2-b638-50c4444d1437)
 - ![image](https://github.com/user-attachments/assets/7e852f73-a80b-440f-a61c-b5e963ef6e3d)
 - ![image](https://github.com/user-attachments/assets/efbad974-13ac-4d21-a0f2-ac9da67e8831)
+- ![image](https://github.com/user-attachments/assets/76ec5001-d505-4806-b7ef-259e3f060236)
+
