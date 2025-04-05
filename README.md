@@ -11,6 +11,9 @@
 ## Nodegroup infrastructure
 
 - Deploy nodegroup stack (cloudformation.yaml)
+- ![image](https://github.com/user-attachments/assets/954aff81-7ef9-4d85-abe1-6de55dce7774)
+- ![image](https://github.com/user-attachments/assets/06d613fb-15cc-4d6b-9f86-66013707eeec)
+- ![image](https://github.com/user-attachments/assets/b3f837a3-62b1-4a47-a5ed-5c5b17af9cd8)
 - `kubectl get svc`
 - `kubectl get all`
 - `kubectl get pods`
