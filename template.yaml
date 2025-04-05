@@ -177,6 +177,7 @@ Resources:
           - Fn::GetAZs: !Ref AWS::Region
       CidrBlock: !Ref PublicSubnet01Block
       VpcId: !Ref VPC
+      MapPublicIpOnLaunch: true
       Tags:
       - Key: Name
         Value: !Sub "${AWS::StackName}-PublicSubnet01"
@@ -191,6 +192,7 @@ Resources:
           - Fn::GetAZs: !Ref AWS::Region
       CidrBlock: !Ref PublicSubnet02Block
       VpcId: !Ref VPC
+      MapPublicIpOnLaunch: true
       Tags:
       - Key: Name
         Value: !Sub "${AWS::StackName}-PublicSubnet02"
