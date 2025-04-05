@@ -36,9 +36,6 @@
 - ![image](https://github.com/user-attachments/assets/afe37cb8-2804-4ba9-b214-ef34610fd18e)
 - kubectl get all -l app.kubernetes.io/name=aws-ebs-csi-driver -n kube-system
 ![image](https://github.com/user-attachments/assets/6e53f52b-36e4-47f1-9107-a184e05e72a0)
-- kubectl get pvc -n elk
-- kubectl describe pod elasticsearch-master-0 -n elk
-- kubectl describe pvc elasticsearch-master-elasticsearch-master-0 -n elk
 
 
 ## Install ELK on EKS via Helm
@@ -51,6 +48,21 @@
 - `helm show values elastic/logstash > values.yml`
 - `helm show values elastic/elasticsearch > values.yml`
 - `helm show values elastic/kibana > values.yml`
+- kubectl get storageclass -n elk
+- default StorageClass that comes with Amazon EKS.
+- use this storage class in values.yml of elasticsearch before install to make sure pvc and pv are created dynamically. 
+- kubectl get pvc -n elk
+- kubectl describe pod elasticsearch-master-0 -n elk
+- kubectl describe pvc elasticsearch-master-elasticsearch-master-0 -n elk
+- ![image](https://github.com/user-attachments/assets/95e0cffc-fb1f-42ea-8bf5-4a3625713b2a)
+```.yaml
+volumeClaimTemplate:
+  accessModes: ["ReadWriteOnce"]
+  resources:
+    requests:
+      storage: 4Gi
+  storageClassName: gp2
+```
 - `helm install elasticsearch elastic/elasticsearch -f values.yml -n elk`
 - `helm upgrade --install elasticsearch elastic/elasticsearch -f values.yml -n elk`
 - `helm install filebeat elastic/filebeat -f values.yml -n elk`
