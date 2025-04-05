@@ -1,5 +1,8 @@
 # ELK
 
+![image](https://github.com/user-attachments/assets/125e6eff-2137-4bca-979e-2cd74f1bc41f)
+
+
 ## ELK infrastructure
 
 - Deploy ELK infrastructure such as VPC, subnets, security group and EKS cluster via github actions (template.yaml)
@@ -20,10 +23,6 @@
 - `kubectl get ns`
 - `kubectl get nodes --watch`
 - `kubectl get nodes`
-- `kubectl get storageclass`
-- `kubectl get pv`
-- `kubectl get pvc --namespace=default`
-- `kubectl get ingress --namespace=default`
 
 ## Amazon EBS CSI driver
 
@@ -70,8 +69,6 @@ volumeClaimTemplate:
 - `helm install logstash elastic/logstash -f values.yml -n elk`
 - `helm install filebeat elastic/filebeat -f values.yml -n elk`
 - `helm install kibana elastic/kibana -f values.yml -n elk`
-- `kubectl get secret elasticsearch-master-credentials -o jsonpath="{.data.username}" | base64 --decode`
-- `kubectl get secret elasticsearch-master-credentials -o jsonpath="{.data.password}" | base64 --decode`
 - ![image](https://github.com/user-attachments/assets/ce193588-e6d3-41d2-b638-50c4444d1437)
 - ![image](https://github.com/user-attachments/assets/7e852f73-a80b-440f-a61c-b5e963ef6e3d)
 - ![image](https://github.com/user-attachments/assets/efbad974-13ac-4d21-a0f2-ac9da67e8831)
