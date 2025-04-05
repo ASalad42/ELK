@@ -37,7 +37,6 @@
 - kubectl get all -l app.kubernetes.io/name=aws-ebs-csi-driver -n kube-system
 ![image](https://github.com/user-attachments/assets/6e53f52b-36e4-47f1-9107-a184e05e72a0)
 
-
 ## Install ELK on EKS via Helm
 
 - `kubectl create ns elk`
@@ -55,6 +54,7 @@
 - kubectl describe pod elasticsearch-master-0 -n elk
 - kubectl describe pvc elasticsearch-master-elasticsearch-master-0 -n elk
 - ![image](https://github.com/user-attachments/assets/95e0cffc-fb1f-42ea-8bf5-4a3625713b2a)
+
 ```.yaml
 volumeClaimTemplate:
   accessModes: ["ReadWriteOnce"]
@@ -63,18 +63,15 @@ volumeClaimTemplate:
       storage: 4Gi
   storageClassName: gp2
 ```
+
 - `helm install elasticsearch elastic/elasticsearch -f values.yml -n elk`
 - `helm upgrade --install elasticsearch elastic/elasticsearch -f values.yml -n elk`
-- `helm install filebeat elastic/filebeat -f values.yml -n elk`
+- `kubectl get secret elasticsearch-master-credentials -n elk -o yaml`
 - `helm install logstash elastic/logstash -f values.yml -n elk`
+- `helm install filebeat elastic/filebeat -f values.yml -n elk`
 - `helm install kibana elastic/kibana -f values.yml -n elk`
 - `kubectl get secret elasticsearch-master-credentials -o jsonpath="{.data.username}" | base64 --decode`
 - `kubectl get secret elasticsearch-master-credentials -o jsonpath="{.data.password}" | base64 --decode`
 - ![image](https://github.com/user-attachments/assets/ce193588-e6d3-41d2-b638-50c4444d1437)
 - ![image](https://github.com/user-attachments/assets/7e852f73-a80b-440f-a61c-b5e963ef6e3d)
 - ![image](https://github.com/user-attachments/assets/efbad974-13ac-4d21-a0f2-ac9da67e8831)
-
-
-
-
-
